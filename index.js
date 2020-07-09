@@ -16,6 +16,8 @@ app.get("/", (req, res) => {
   res.status(200).json(products);
 });
 
+
+
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log("Products listening on port", port);
