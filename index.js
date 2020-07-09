@@ -1,14 +1,22 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/', (req, res) => {
-  console.log('Hello world received a request.');
+const products = [
+  {
+    id: 1,
+    name: "Product 1",
+  },
+  {
+    id: 2,
+    name: "Product 2",
+  },
+];
 
-  const target = process.env.TARGET || 'World';
-  res.send(`Hello ${target}! 2`);
+app.get("/", (req, res) => {
+  res.status(200).json(products);
 });
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
-  console.log('Hello world listening on port', port);
+  console.log("Products listening on port", port);
 });
