@@ -37,4 +37,4 @@ jobs:
         PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
-        args: run deploy products --image gcr.io/${{ secrets.GCLOUD_PROJECT_ID }}/products --platform managed --region us-east4 --allow-unauthenticated
+        args: run deploy products --image gcr.io/${{ secrets.GCLOUD_PROJECT_ID }}/products --platform managed --region us-central1 --allow-unauthenticated
